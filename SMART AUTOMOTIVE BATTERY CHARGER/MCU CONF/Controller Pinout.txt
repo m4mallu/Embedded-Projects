@@ -1,0 +1,20 @@
+Parameter	Ard Pin		IC Pin
+**************************************
+RelayPinA1	2		4		
+RelayPinA2	3		5
+RelayPinA3	4		6
+RelayPinA4	5		11
+
+RelayPinB1	6		12		
+RelayPinB2	7		13
+RelayPinB3	8		14
+RelayPinB4	9		15
+
+ManualMode	10		16
+
+LCD-RS		A0		23
+LCD-E		A1		24
+LCD-D4		A2		25
+LCD-D5		A3		26
+LCD-D6		A4		27
+LCD-D7		A5		28

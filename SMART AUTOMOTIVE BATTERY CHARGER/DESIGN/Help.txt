@@ -1,0 +1,6 @@
+The cirtcuit simulation and design of the project was done with the Proteus 7.6 Design suite.
+You need to learn the software before make any changes in the design file given along with this project.
+Watch some YouTube video tutorials to learn this software before you proceed.
+
+Design Software - Proteus 7.6
+Download Link - http://bit.ly/2D7SFs9
