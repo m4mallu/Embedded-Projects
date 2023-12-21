@@ -1,0 +1,76 @@
+C51 COMPILER V8.12   89C2051                                                               07/28/2015 15:27:00 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE 89C2051
+OBJECT MODULE PLACED IN 89c2051.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 89c2051.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<AT89x051.h>
+   2          int i,j;
+   3           void delay1()
+   4          {
+   5   1       TMOD=0x01;                                     
+   6   1              for (i=0;i<=4.5;i++)
+   7   1              {
+   8   2                      for(j=0;j<=4.5;j++)
+   9   2                      {
+  10   3                              TL0=0xAF;
+  11   3                              TH0=0x3C;
+  12   3                              TR0=1;
+  13   3                              while(TF0==0);
+  14   3                              TR0=0;
+  15   3                              TF0=0;
+  16   3                      }
+  17   2              }
+  18   1      }
+  19           void delay2()
+  20          { 
+  21   1       TMOD=0x01;
+  22   1              for (j=0;j<=4.5;j++)
+  23   1               {
+  24   2                      for(i=0;i<=4.5;i++)
+  25   2                      {
+  26   3                              TL0=0XAF;
+  27   3                              TH0=0x3C;
+  28   3                              TR0=1;
+  29   3                              while(TF0==0);
+  30   3                              TR0=0;
+  31   3                              TF0=0;
+  32   3                      }
+  33   2              }
+  34   1      }
+  35          void main()
+  36          {  
+  37   1      P1=0;
+  38   1      P3=0;
+  39   1       while(1)
+  40   1       {
+  41   2              P1_7 =1;
+  42   2              P1_6 =1;
+  43   2              P1_5 =1;
+  44   2                      delay1();
+  45   2              P1_7 =0;
+  46   2              P1_6 =0;
+  47   2              P1_5 =0;
+  48   2                      delay2();                      
+  49   2       }
+  50   1      }
+  51          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    203    ----
+C51 COMPILER V8.12   89C2051                                                               07/28/2015 15:27:00 PAGE 2   
+
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

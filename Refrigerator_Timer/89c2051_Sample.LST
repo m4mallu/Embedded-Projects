@@ -1,0 +1,71 @@
+C51 COMPILER V8.12   89C2051_SAMPLE                                                        07/30/2015 14:04:54 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE 89C2051_SAMPLE
+OBJECT MODULE PLACED IN 89c2051_Sample.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 89c2051_Sample.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<AT89x051.h>
+   2          P2=0;
+   3          P0=0;
+   4          void delay1()
+   5          {
+   6   1              int i;
+   7   1              TMOD=0x01;
+   8   1              for (i=1;i<=200;i++)    // 10 sec
+   9   1              {
+  10   2                      TL0=0xAF;
+  11   2                      TH0=0x3C;
+  12   2                      TR0=1;
+  13   2                      while(TF0==0);
+  14   2                      TR0=0;
+  15   2                      TF0=0;
+  16   2              }
+  17   1      }
+  18           void delay2()
+  19          { 
+  20   1              int j;
+  21   1              TMOD=0x01;
+  22   1              for (j=0;j<=100;j++)    // 5 sec
+  23   1              {
+  24   2                      TL0=0XAF;
+  25   2                      TH0=0x3C;
+  26   2                      TR0=1;
+  27   2                      while(TF0==0);
+  28   2                      TR0=0;
+  29   2                      TF0=0;
+  30   2              }
+  31   1      }
+  32          void main()
+  33          {
+  34   1              P1=0;
+  35   1              P3=0;
+  36   1      while(1)
+  37   1       {
+  38   2              P1_0 =1;
+  39   2              P1_1 =1;
+  40   2                      delay1();
+  41   2              P1_0 =0;
+  42   2              P1_1 =0;
+  43   2                      delay2();
+  44   2       }
+  45   1      }
+  46          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     88    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V8.12   89C2051_SAMPLE                                                        07/30/2015 14:04:54 PAGE 2   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

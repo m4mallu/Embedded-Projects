@@ -1,0 +1,154 @@
+BL51 BANKED LINKER/LOCATER V6.11                                                        07/28/2015  15:27:00  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.11, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 89c2051.obj TO 89c2051
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  89c2051.obj (89C2051)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+
+
+LINK MAP OF MODULE:  89c2051 (89C2051)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?89C2051
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00B9H     UNIT         ?C?LIB_CODE
+            CODE    00BCH     0059H     UNIT         ?PR?DELAY1?89C2051
+            CODE    0115H     0059H     UNIT         ?PR?DELAY2?89C2051
+            CODE    016EH     0019H     UNIT         ?PR?MAIN?89C2051
+            CODE    0187H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   89c2051 (89C2051)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?89C2051
+
+?PR?MAIN?89C2051
+  +--> ?PR?DELAY1?89C2051
+  +--> ?PR?DELAY2?89C2051
+
+
+
+SYMBOL TABLE OF MODULE:  89c2051 (89C2051)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        89C2051
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.11                                                      07/28/2015  15:27:00  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:0090H.5       PUBLIC        P1_5
+  B:0090H.6       PUBLIC        P1_6
+  B:0090H.7       PUBLIC        P1_7
+  C:016EH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  C:00BCH         PUBLIC        delay1
+  C:0115H         PUBLIC        delay2
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:0008H         PUBLIC        i
+  D:000AH         PUBLIC        j
+  -------         PROC          DELAY1
+  C:00BCH         LINE#         3
+  C:00BCH         LINE#         4
+  C:00BCH         LINE#         5
+  C:00BFH         LINE#         6
+  C:00D8H         LINE#         7
+  C:00D8H         LINE#         8
+  C:00F1H         LINE#         9
+  C:00F1H         LINE#         10
+  C:00F4H         LINE#         11
+  C:00F7H         LINE#         12
+  C:00F9H         LINE#         13
+  C:00FCH         LINE#         14
+  C:00FEH         LINE#         15
+  C:0100H         LINE#         16
+  C:010AH         LINE#         17
+  C:0114H         LINE#         18
+  -------         ENDPROC       DELAY1
+  -------         PROC          DELAY2
+  C:0115H         LINE#         19
+  C:0115H         LINE#         20
+  C:0115H         LINE#         21
+  C:0118H         LINE#         22
+  C:0131H         LINE#         23
+  C:0131H         LINE#         24
+  C:014AH         LINE#         25
+  C:014AH         LINE#         26
+  C:014DH         LINE#         27
+  C:0150H         LINE#         28
+  C:0152H         LINE#         29
+  C:0155H         LINE#         30
+  C:0157H         LINE#         31
+  C:0159H         LINE#         32
+  C:0163H         LINE#         33
+  C:016DH         LINE#         34
+  -------         ENDPROC       DELAY2
+  -------         PROC          MAIN
+  C:016EH         LINE#         35
+  C:016EH         LINE#         36
+  C:016EH         LINE#         37
+  C:0171H         LINE#         38
+  C:0173H         LINE#         39
+BL51 BANKED LINKER/LOCATER V6.11                                                      07/28/2015  15:27:00  PAGE 3
+
+
+  C:0173H         LINE#         40
+  C:0173H         LINE#         41
+  C:0175H         LINE#         42
+  C:0177H         LINE#         43
+  C:0179H         LINE#         44
+  C:017CH         LINE#         45
+  C:017EH         LINE#         46
+  C:0180H         LINE#         47
+  C:0182H         LINE#         48
+  C:0185H         LINE#         49
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        89C2051
+
+  -------         MODULE        ?C?FPCMP
+  C:0005H         PUBLIC        ?C?FPCMP
+  C:0003H         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        ?C?FCAST
+  C:007AH         PUBLIC        ?C?FCASTC
+  C:0075H         PUBLIC        ?C?FCASTI
+  C:0070H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?LNEG
+  C:00AEH         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+Program Size: data=13.0 xdata=0 code=403
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

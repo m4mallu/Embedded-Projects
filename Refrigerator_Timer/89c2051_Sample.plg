@@ -1,0 +1,15 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\renjith\Desktop\Regulator\89c2051_Sample.uv2
+Project File Date:  07/30/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling 89c2051_Sample.c...
+linking...
+Program Size: data=13.0 xdata=0 code=240
+creating hex file from "89c2051_Sample"...
+"89c2051_Sample" - 0 Error(s), 0 Warning(s).
